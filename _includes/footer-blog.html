@@ -1,0 +1,12 @@
+<div class="footer-bar"><div class="contact-information"><span>Contact Info</span><ul><li>contact@justincuizon.com</li></ul><div class="social-icons"><ul><li><a href="https://www.facebook.com/juscuizon" target="_blank"><i class="fa fa-facebook fa"></i></a></li><li><a href="https://twitter.com/juscuizon" target="_blank"><i class="fa fa-twitter fa"></i></a></li><li><a href="https://www.instagram.com/juscuizon/" target="_blank"><i class="fa fa-instagram fa"></i></a></li><li><a href="https://www.youtube.com/channel/UCoOBmvKmiQzjkB3Wwd8SLnA" target="_blank"><i class="fa fa-youtube-play fa"></i></a></li></ul></div></div><div class="recent-post"><span>Recent Post</span>{% for post in site.posts limit:1 %}<div class="recent-post-container">{% assign foundImage = 0 %}
+{% assign images = post.content | split:"<img " %}
+{% for image in images %}
+{% if image contains 'src' %}
+{% if foundImage == 0 %}
+{% assign html = image | split:"/>" | first %}
+<img class="featured-image preload" {{ html }} />
+{% assign foundImage = 1 %}
+{% endif %}
+{% endif %}
+{% endfor %}
+<img class="featured-image-small preload"  src="{{site.baseurl}}/assets/img/small-avatar.jpg" /><div class="post-title"><h1> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1></div><div class="post-details"><p>{{ post.date | date_to_long_string }}</p></div></div>{% endfor %}</div><div class="categories"><span>Categories</span><ul><li><a href="{{ site.baseurl }}/categories/technology">TECHNOLOGY</a></li><li><a href="{{ site.baseurl }}/categories/finance">FINANCE</a></li><li><a href="{{ site.baseurl }}/categories/fitness">FITNESS</a></li><li><a href="{{ site.baseurl }}/categories/food">FOOD</a></li><li><a href="{{ site.baseurl }}/categories/travel">TRAVEL</a></li></ul></div></div><div class="copyright-bar"><span>© 2017 copyright cuizondesigns. All rights reserved.</span></div>

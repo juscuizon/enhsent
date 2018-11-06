@@ -1,0 +1,73 @@
+*
+	margin: 0px
+	padding: 0px
+
+body
+	overflow-x: hidden
+	z-index: -4
+	position: relative
+	background: #fafafa
+
+.page-container
+	position: relative
+	max-width: 1200px
+	min-height: 1400px
+	left: 0px
+	margin: 0px auto
+	//border: solid blue
+
+.footer-container
+	position: relative
+	max-width: 1200px
+	min-height: 199px
+	left: 0px
+	margin: 0px auto
+
+.content-area-container
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	margin-bottom: 50px
+	min-height: 1400px
+	//border: solid red
+
+
+//Medium PC Monitors
+@media (min-width: 960px) and (max-width: 1200px)
+	.page-container
+		position: relative
+		max-width: 1100px
+		margin: 0px auto
+
+//Small Monitors and Large Tablets
+@media (min-width: 801px) and (max-width: 960px)
+	.page-container
+		position: relative
+		max-width: 890px
+		margin: 0px auto
+
+	.content-area-container
+		margin-top: -295px
+		justify-content: space-around
+
+//Small Monitors and Tablets
+@media (min-width: 501px) and (max-width: 800px)
+	.page-container
+		position: relative
+		max-width: 720px
+		margin: 0px auto
+
+	.content-area-container
+		flex-direction: column
+		margin-top: -295px
+
+//Mobile Devices
+@media (min-width: 50px) and (max-width: 500px)
+	.page-container
+		position: relative
+		max-width: 500px
+		margin: 0px auto
+
+	.content-area-container
+		flex-direction: column
+		margin-top: -295px

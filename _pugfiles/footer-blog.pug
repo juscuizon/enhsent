@@ -1,0 +1,55 @@
+.footer-bar
+	.contact-information
+		span Contact Info
+		ul
+			li contact@justincuizon.com
+			
+		.social-icons
+			ul
+				li: a(href="https://www.facebook.com/juscuizon" target="_blank"): i.fa.fa-facebook.fa
+				li: a(href="https://twitter.com/juscuizon" target ="_blank"): i.fa.fa-twitter.fa
+				li: a(href="https://www.instagram.com/juscuizon/" target ="_blank"): i.fa.fa-instagram.fa
+				li: a(href="https://www.youtube.com/channel/UCoOBmvKmiQzjkB3Wwd8SLnA" target ="_blank"): i.fa.fa-youtube-play.fa
+
+
+	.recent-post
+		span Recent Post
+		|{% for post in site.posts limit:1 %}
+		.recent-post-container
+
+			|{% assign foundImage = 0 %}
+			|{% assign images = post.content | split:"<img " %}
+			|{% for image in images %}
+			|{% if image contains 'src' %}
+			|{% if foundImage == 0 %}
+			|{% assign html = image | split:"/>" | first %}
+			|<img class="featured-image preload" {{ html }} />
+			|{% assign foundImage = 1 %}
+			|{% endif %}
+			|{% endif %}
+			|{% endfor %}
+
+			|<img class="featured-image-small preload"  src="{{site.baseurl}}/assets/img/small-avatar.jpg" />
+			
+			.post-title
+				h1 
+					a(href="{{ site.baseurl }}{{ post.url }}")
+						|{{ post.title }}
+
+			.post-details
+				p
+					|{{ post.date | date_to_long_string }}
+
+		|{% endfor %}
+
+	.categories
+		span Categories
+		ul
+			li: a(href="{{ site.baseurl }}/categories/technology") TECHNOLOGY
+			li: a(href="{{ site.baseurl }}/categories/finance") FINANCE
+			li: a(href="{{ site.baseurl }}/categories/fitness") FITNESS
+			li: a(href="{{ site.baseurl }}/categories/food") FOOD
+			li: a(href="{{ site.baseurl }}/categories/travel") TRAVEL
+
+.copyright-bar
+	span © 2017 copyright cuizondesigns. All rights reserved.

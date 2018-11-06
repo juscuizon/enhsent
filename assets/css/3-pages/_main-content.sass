@@ -1,0 +1,343 @@
+.main-content
+	width: 845px
+	min-height: 1600px
+	z-index: 1
+	//border: solid yellow
+
+	.posts-container
+		background-color: white
+		margin-top: 50px
+		margin-bottom: 50px
+		width: 810px
+		min-height: 650px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		padding: 25px 20px
+		box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.11)
+		//border: solid violet
+
+		.post-categories
+			text-transform: uppercase
+
+			a
+				text-decoration: none
+				color: #333333
+				font-family: 'Raleway'
+				font-size: 18px
+
+			a:hover
+				color: #e03821
+				transition: 0.4s
+
+		.post-title
+			text-transform: uppercase
+
+			a
+				text-decoration: none
+				color: #333333
+				font-family: 'Teko'
+				font-size: 50px
+
+			a:hover
+				color: #e03821
+				transition: 0.4s
+
+		.post-details
+			text-transform: uppercase
+			margin-bottom: 5px
+
+			span, a
+				font-family: 'Righteous'
+				font-size: 12px
+				color: #333
+				margin-right: 2px
+				text-decoration: none
+
+		.featured-image
+			display: flex
+			width: 835px
+			height: 626.25px
+			margin-bottom: 15px
+
+		.featured-image.preload
+			display: none
+
+		.featured-image-small
+			display: none
+
+		.featured-image-small.preload
+			display: flex
+			width: 835px
+			height: 626.25px
+			margin-bottom: 15px 
+
+		.post-excerpt
+			padding-bottom: 50px
+			margin-bottom: 10px
+			min-width: 800px
+			border-bottom: dashed #dedede 0.1px
+			text-align: justify
+			font-family: 'Cabin'
+			font-size: 14px
+			line-height: 18px
+			color: #333
+
+		.bottom-cta
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+			min-width: 810px
+			margin-top: 20px
+
+			.continue-button
+				display: flex
+				justify-content: center
+				align-items: center
+				text-align: center
+
+				a:hover
+					background-color: #e03821
+					transition: 0.5s
+
+				a
+					text-decoration: none
+					font-family: 'Raleway'
+					background-color: #222222
+					padding: 15px 20px
+					color: white
+
+			.social-icons
+				ul
+					display: flex
+					flex-direction: row
+
+					li
+						margin-right: 0px
+						list-style-type: none
+
+						a
+							font-size: 20px
+							color: grey
+							padding: 10px
+
+						a:hover
+							color: #e03821
+							transition: all 0.5s
+
+	.pagination 
+		text-align: center
+
+		a, span
+			padding: 7px 18px
+			border: 1px solid #eee
+			margin-left: -2px
+			margin-right: -2px
+			background-color: #fff
+			text-decoration: none
+			color: #333
+			display: inline-block
+			box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.11)
+	
+
+		a:hover     
+			background-color: #e03821
+			color: #333
+			transition: all 0.5s
+			
+
+//==================Posts Design=====================
+.image.preload
+	display: none
+
+.image
+	margin-top: 20px
+	width: 835px
+	height: 626.25px
+	display: flex
+
+.small-image.preload
+	margin-top: 20px
+	width: 835px
+	height: 626.25px
+	display: flex
+	image-rendering: pixelated
+
+.small-image
+	display: none
+
+.post-content
+	font-family: 'Cabin'
+	font-size: 13.5px
+	text-align: center
+	line-height: 20px
+	color: #333
+
+
+//================Responsive Design====================
+//Medium PC Monitors
+@media (min-width: 961px) and (max-width: 1200px)
+	.main-content
+		margin-left: 30px
+		width: 640px
+
+		.posts-container
+			width: 600px
+
+			.featured-image, .image, .featured-image-small.preload, .small-image.preload
+				width: 625px
+				height: 468.75px
+				margin-bottom: 15px
+
+			.post-excerpt
+				padding-bottom: 50px
+				margin-bottom: 10px
+				min-width: 599px
+				border-bottom: dashed grey 0.1px
+				text-align: center
+				font-family: 'Cabin'
+				font-size: 13px
+
+			.bottom-cta
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				align-items: center
+				min-width: 610px
+				margin-top: 20px
+
+//Small Monitors and Large Tablets
+@media (min-width: 801px) and (max-width: 960px)
+	.main-content
+		margin-left: 30px
+		width: 520px
+
+		.pagination
+			margin-top: 50px
+
+		.posts-container
+			margin-top: 50px
+			margin-bottom: 0px
+			width: 480px
+
+			.featured-image, .image, .featured-image-small.preload, .small-image.preload
+				width: 510px
+				height: 382.50px
+				margin-bottom: 15px
+
+			.post-excerpt
+				padding-bottom: 50px
+				margin-bottom: 10px
+				min-width: 479px
+				border-bottom: dashed grey 0.1px
+				text-align: center
+				font-family: 'Cabin'
+				font-size: 13px
+
+			.bottom-cta
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				align-items: center
+				min-width: 490px
+				margin-top: 20px
+
+
+
+//Small Monitors and Tablets
+@media (min-width: 501px) and (max-width: 800px)
+	.main-content
+		margin: 0 auto
+		width: 400px
+
+		.pagination
+			margin-top: 50px
+
+		.posts-container
+			margin-top: 50px
+			margin-bottom: 0px
+			width: 360px
+
+			.post-categories
+				a
+					font-size: 14px
+
+			.post-title
+				text-align: center
+				a
+					font-size: 30px
+
+			.featured-image, .image, .featured-image-small.preload, .small-image.preload
+				width: 390px
+				height: 292.50px
+				margin-bottom: 15px
+
+			.post-excerpt
+				padding-bottom: 50px
+				margin-bottom: 10px
+				min-width: 359px
+				border-bottom: dashed grey 0.1px
+				text-align: center
+				font-family: 'Cabin'
+				font-size: 13px
+
+			.bottom-cta
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				align-items: center
+				min-width: 370px
+				margin-top: 20px
+
+				.continue-button
+					margin-bottom: 30px
+
+//Mobile Devices
+@media (min-width: 50px) and (max-width: 500px)
+	.main-content
+		margin: 0 auto
+		width: 310px
+
+		.pagination
+			margin-top: 50px
+
+		.posts-container
+			margin-top: 50px
+			margin-bottom: 0px
+			width: 270px
+
+			.post-categories
+				a
+					font-size: 14px
+
+			.post-title
+				text-align: center
+				a
+					font-size: 30px
+
+			.featured-image, .image, .featured-image-small.preload, .small-image.preload
+				width: 300px
+				height: 225px
+				margin-bottom: 15px
+
+			.post-excerpt
+				padding-bottom: 50px
+				margin-bottom: 10px
+				min-width: 299px
+				border-bottom: dashed grey 0.1px
+				text-align: center
+				font-family: 'Cabin'
+				font-size: 13px
+
+			.bottom-cta
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				align-items: center
+				min-width: 370px
+				margin-top: 20px
+
+				.continue-button
+					margin-bottom: 30px

@@ -1,0 +1,156 @@
+.dev-process-section-container
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	min-width: 99vw
+	min-height: 500px
+	padding-top: 50px
+
+	.header
+		align-items: center
+		margin: 0 auto
+		display: flex
+		flex-direction: column
+
+		span
+			font-family: 'Roboto'
+			font-size: 30px
+			text-align: center
+			color: #3e3e3e
+
+		.firstspan
+			font-family: 'Roboto Condensed'
+			font-size: 14px
+			color: #f7931e
+
+		.secondspan
+			margin-bottom: 30px
+
+	.col
+		display: flex
+		flex-direction: row
+		justify-content: space-around
+		max-width: 100vw
+		margin-bottom: 50px
+
+		.title
+			text-align: center
+			font-family: 'Roboto Condensed'
+			font-size: 22px
+			color: #f7931e
+			margin-bottom: 20px
+
+		.desc
+			text-align: center
+			font-family: 'Roboto'
+			font-size: 16px
+			color: #3e3e3e
+			margin-top: 10px
+
+
+		.icon-strategy
+			margin: 0 auto
+			width: 100px
+			height: 100px
+			background-image: url("../img/strategy.svg")
+			transition: all .2s ease-in-out
+		.icon-strategy:hover
+					transform: scale(1.1)
+
+		.icon-content
+			margin: 0 auto
+			width: 100px
+			height: 100px
+			background-image: url("../img/content.svg")
+			transition: all .2s ease-in-out
+		.icon-content:hover
+					transform: scale(1.1)
+
+		.icon-design
+			margin: 0 auto
+			width: 100px
+			height: 100px
+			background-image: url("../img/design.svg")
+			transition: all .2s ease-in-out
+		.icon-design:hover
+					transform: scale(1.1)
+
+		.icon-development
+			margin: 0 auto
+			width: 100px
+			height: 100px
+			background-image: url("../img/development.svg")
+			transition: all .2s ease-in-out
+		.icon-development:hover
+					transform: scale(1.1)
+
+		.icon-support
+			margin: 0 auto
+			width: 100px
+			height: 100px
+			background-image: url("../img/support.svg")
+			transition: all .2s ease-in-out
+		.icon-support:hover
+					transform: scale(1.1)
+
+		.icon-optimize
+			margin: 0 auto
+			width: 100px
+			height: 100px
+			background-image: url("../img/optimize.svg")
+			transition: all .2s ease-in-out
+		.icon-optimize:hover
+					transform: scale(1.1)
+
+
+	.row
+		display: flex
+		flex-direction: column
+		justify-content: center
+		min-width: 300px
+		min-height: 100px
+
+//================Responsive Design====================
+//Medium PC Monitors
+@media (min-width: 961px) and (max-width: 1200px)
+	.dev-process-section-container
+
+//Small Monitors and Large Tablets
+@media (min-width: 801px) and (max-width: 960px)
+	.dev-process-section-container
+
+		.row-container
+			display: flex
+			justify-content: center
+			flex-direction: row
+			margin-top: 50px
+
+			.col
+				flex-direction: column
+
+//Small Monitors and Tablets
+@media (min-width: 501px) and (max-width: 800px)
+	.dev-process-section-container
+
+		.row-container
+			display: flex
+			justify-content: center
+			flex-direction: row
+			margin-top: 50px
+
+			.col
+				flex-direction: column
+
+				.desc
+					font-size: 16px
+
+
+//Mobile Devices
+@media (min-width: 50px) and (max-width: 500px)
+	.dev-process-section-container
+		
+		.col
+			flex-direction: column
+
+			.row
+				margin-bottom: 10px

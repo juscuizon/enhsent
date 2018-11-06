@@ -1,0 +1,195 @@
+.header-social-media
+	display: flex
+	min-width: 99vw
+	justify-content: flex-end
+	background-color: #3b3f5e
+
+
+	ul
+
+		li
+			display: inline-block
+			margin-right: 10px
+			list-style-type: none
+
+			a
+				text-decoration: none
+				color: #fafafa
+				font:
+					size: 16px
+					family: 'Titillium Web'
+				letter-spacing: 1px
+
+			a:hover
+				color: #f7931e
+				transition: all 0.3s ease-in-out
+
+.header-container
+	display: flex
+	justify-content: space-around
+	align-items: center
+	min-width: 99vw
+	min-height: 60px
+	background-color: #2a2f4d
+	.header-logo
+		width: 200px
+		height: 40px
+		background:
+			image: url('../img/logo.svg')
+			repeat: no-repeat
+
+	.header-nav
+		ul
+			li
+				display: inline-block
+				margin-right: 50px
+				list-style-type: none
+
+				a
+					text-decoration: none
+					color: #fafafa
+					font:
+						size: 16px
+						family: 'Titillium Web'
+					letter-spacing: 1px
+
+					.hidden
+						display: none
+
+				a:hover
+					border-top: 2px #f7931e solid
+					border-bottom: 2px #f7931e solid
+					color: #f7931e
+					transition: all 0.1s ease-in-out
+
+	.header-mobile-nav-button
+		display: none
+		background-image: url('../img/hamburger-button.svg')
+		background-repeat: no-repeat
+		width: 50px
+		height: 50px
+		margin-right: 7px
+
+	.header-mobile-nav-button.active
+		background-image: url('../img/hamburger-button-active.svg')
+		background-repeat: no-repeat
+		width: 50px
+		height: 50px
+		margin-right: 7px
+
+.header-mobile-nav
+	display: flex
+	flex-direction: column
+	max-height: 0px
+	transform: translateY(-500px)
+
+.header-mobile-nav.active
+	justify-content: center
+	min-height: 105vh
+	min-width: 100vw
+	background-color: #3b3f5e
+	transform: translateY(0px)
+	transition: all 0.1s ease
+
+	ul
+		text-decoration: none
+		text-align: center
+
+		li
+			list-style-type: none
+			margin-bottom: 50px
+
+			a
+				text-decoration: none
+				color: #f7931e
+				text-transform: uppercase
+				font:
+					size: 20px
+					family: 'Titillium Web'
+
+		li:first-child
+			margin-top: 50px
+
+	.header-mobile-nav-social-media
+		display: flex
+		justify-content: center
+		background-color: #3b3f5e
+
+		ul
+
+			li
+				display: inline-block
+				margin-right: 10px
+				list-style-type: none
+
+				a
+					text-decoration: none
+					color: #f7931e
+					font:
+						size: 16px
+						family: 'Titillium Web'
+					letter-spacing: 1px
+				
+
+//================Responsive Design====================
+//Medium PC Monitors
+@media (min-width: 961px) and (max-width: 1200px)
+	.header-social-media
+		ul
+			li:last-child
+				margin-right: 0px
+
+
+	.header-container
+		justify-content: space-between
+
+		ul
+			li:last-child
+				margin-right: 0px
+
+//Small Monitors and Large Tablets
+@media (min-width: 801px) and (max-width: 960px)
+	.header-social-media
+		ul
+			li:last-child
+				margin-right: 0px
+
+
+	.header-container
+		justify-content: space-between
+
+		ul
+			li:last-child
+				margin-right: 0px
+
+//Small Monitors and Tablets
+@media (min-width: 501px) and (max-width: 800px)
+	.header-social-media
+		display: none
+
+	.header-container
+		justify-content: space-between
+
+		.header-logo
+
+		.header-nav
+			display: none
+
+		.header-mobile-nav-button
+			display: flex
+
+//Mobile Devices
+@media (min-width: 50px) and (max-width: 500px)
+	.header-social-media
+		display: none
+
+	.header-container
+		justify-content: space-between
+
+		.header-logo
+
+		.header-nav
+			display: none
+
+		.header-mobile-nav-button
+			display: flex

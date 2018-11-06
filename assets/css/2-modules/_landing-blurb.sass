@@ -1,0 +1,93 @@
+.blurb-container
+	display: flex
+	flex-direction: column
+	justify-content: space-evenly
+	width: 100vw
+	height: 100vh
+	text-align: center
+	align-items: center
+	background-image: url("../img/landing-blurb-bg.jpg")
+	background-size: cover
+	background-position: 50% 0
+	background-repeat: no-repeat
+
+	.blurb-text
+		h1
+			font-family: 'Roboto Condensed'
+			font-size: 70px
+			color: #fafafa
+			letter-spacing: 2px
+			line-height: 30px
+
+		h4
+			font-family: 'Roboto'
+			font-size: 19px
+			color: #fafafa
+			letter-spacing: 2px
+			line-height: 25px
+
+	button
+		background-color: #f7931e
+		padding: 15px
+		border-radius: 10px
+		border: none
+		font-family: 'Roboto Condensed'
+		font-size: 19px
+		color: #fafafa
+		letter-spacing: 1px
+		box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75)
+
+	button:hover
+		background-color: #d27507
+		transition: all 0.1s ease-in-out
+			
+//================Responsive Design====================
+//Medium PC Monitors
+@media (min-width: 961px) and (max-width: 1200px)
+	.blurb-container
+
+//Small Monitors and Large Tablets
+@media (min-width: 801px) and (max-width: 960px)
+	.blurb-container
+
+//Small Monitors and Tablets
+@media (min-width: 501px) and (max-width: 800px)
+	.blurb-container
+		min-height: 150vh
+
+		.blurb-text
+			h1
+				font-family: 'Roboto Condensed'
+				font-size: 70px
+				color: #fafafa
+				letter-spacing: 2px
+				line-height: 60px
+
+			h4
+				font-family: 'Roboto'
+				font-size: 19px
+				color: #fafafa
+				letter-spacing: 2px
+				line-height: 25px
+
+
+//Mobile Devices
+@media (min-width: 50px) and (max-width: 500px)
+	.blurb-container
+		min-width:  100vw
+		min-height: 170vh
+
+		.blurb-text
+			h1
+				font-family: 'Roboto Condensed'
+				font-size: 60px
+				color: #fafafa
+				letter-spacing: 2px
+				line-height: 80px
+
+			h4
+				font-family: 'Roboto'
+				font-size: 19px
+				color: #fafafa
+				letter-spacing: 2px
+				line-height: 25px

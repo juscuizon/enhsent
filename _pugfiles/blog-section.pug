@@ -1,0 +1,47 @@
+.blog-section-container
+	.header
+		h2: a(href="{{sitebase.url}}/blog/index.html" target="_blank") Blog
+	.recent-blog
+		ul
+			|<div class = "post-row">
+			|{% for post in site.posts limit:3 %}
+			|<div class="posts-container">
+			|
+			|<div class="post-title">
+			|<h3><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title }}</a></h3>
+			|</div>
+			|
+			|<div class= "post-details">
+			|<span> {{ post.date | date: '%B %d, %Y' }} </span>
+			|</div>
+			|
+			|{% assign foundImage = 0 %}
+			|{% assign images = post.content | split:"<img " %}
+			|{% for image in images %}
+			|{% if image contains 'src' %}
+			|{% if foundImage == 0 %}
+			|{% assign html = image | split:"/>" | first %}
+			|<a href="{{ site.baseurl }}{{ post.url }}" target="_blank" class="featured-image-hover"><img class="featured-image preload" {{ html }} /></a>
+			|{% assign foundImage = 1 %}
+			|{% endif %}
+			|{% endif %}
+			|{% endfor %}
+			|
+			|<img class="featured-image-small preload"  src="{{site.baseurl}}/assets/img/{{post.preload}}" />
+			|<div class="bottom-cta">
+			|<span class="continue-button">
+			|<a href="{{ site.baseurl }}{{ post.url }}" target="_blank" >READ MORE &#187;</a>
+			|</span>
+			|
+			|
+			|</div>
+			|
+			|</div>
+			|
+			|{% endfor %}
+			|</div>
+	
+	button(type = "button" onclick = "location.href='{{sitebase.url}}/blog/index.html' ") VIEW OUR BLOG &#187;
+	#contact
+
+

@@ -1,0 +1,58 @@
+---
+title: Fitness - Design That Focuses on Increasing Profit
+layout: blog
+---
+
+<ul class="posts-list">
+	{% for post in site.categories.fitness %}
+		<div class="posts-container">
+			
+			<div class="post-categories">
+				<a href="{{ site.baseurl }}/categories/game">{{ post.categories }}</a>
+			</div>
+		
+			<div class="post-title">
+				<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+			</div>
+
+			<div class= "post-details">
+				<span><a href="{{ site.baseurl }}{{ post.url }}#disqus_thread">{{ post.title }}</a></span>
+				<span> | </span>
+				<span> {{ post.date | date: '%B %d, %Y' }} </span>
+			</div>
+
+			{% assign foundImage = 0 %}
+			{% assign images = post.content | split:"<img " %}
+			{% for image in images %}
+			{% if image contains 'src' %}
+			{% if foundImage == 0 %}
+			{% assign html = image | split:"/>" | first %}
+			<img class="featured-image preload" {{ html }} />
+			{% assign foundImage = 1 %}
+			{% endif %}
+			{% endif %}
+			{% endfor %}
+
+			<img class="featured-image-small preload"  src="{{site.baseurl}}/assets/img/small-avatar.jpg" />
+
+			<div class="post-excerpt">
+				<span class="post-excerpt">{{ post.excerpt }}</span>
+			</div>
+
+			<div class="bottom-cta">
+				<span class="continue-button">
+					<a href="{{ site.baseurl }}{{ post.url }}">CONTINUE READING</a>
+				</span>
+
+				<span class="social-icons">
+				<ul>
+					<li> <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{site.baseurl}}{{ post.url }}" onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class = "fa fa-facebook fa share-button"></i></a></li>
+					<li> <a href="https://twitter.com/home?status={{ site.url }}{{site.baseurl}}{{ post.url }}" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"> <i class = "fa fa-twitter fa share-button"></i></a></li>
+					<li> <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{site.baseurl}}{{ post.url }}" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"> <i class = "fa fa-linkedin fa share-button"></i></a></li>
+				</ul>
+				</span>
+			</div>
+
+		</div>
+	{% endfor %}
+</ul>

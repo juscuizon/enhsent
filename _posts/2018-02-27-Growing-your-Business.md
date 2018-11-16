@@ -10,6 +10,8 @@ visible: 1
 comments: true
 ---
 
+Growing your business
+
 
 ![profile]({{site.baseurl}}/assets/img/growing.jpg){: .image.preload}
 ![profile]({{site.baseurl}}/assets/img/small-growing.jpg){: .small-image.preload}

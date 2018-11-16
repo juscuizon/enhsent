@@ -11,6 +11,8 @@ comments: true
 ---
 
 
+Building a business
+
 
 ![profile]({{site.baseurl}}/assets/img/building.jpg){: .image.preload}
 ![profile]({{site.baseurl}}/assets/img/small-building.jpg){: .small-image.preload}

@@ -7,7 +7,7 @@ var pug         = require('gulp-pug');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
-    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+    jekyllBuild: '<span style="color: grey">Running:</span> $ JEKYLL_ENV=production jekyll build'
 };
 
 /**

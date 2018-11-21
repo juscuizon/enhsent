@@ -4550,12 +4550,13 @@ body {
         -o-transition: 0.4s;
         transition: 0.4s; }
     .main-content .posts-container .post-title {
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      text-align: center; }
       .main-content .posts-container .post-title a {
         text-decoration: none;
         color: #333333;
         font-family: 'Teko';
-        font-size: 50px; }
+        font-size: 45px; }
       .main-content .posts-container .post-title a:hover {
         color: #e03821;
         -webkit-transition: 0.4s;
@@ -4597,8 +4598,8 @@ body {
       border-bottom: dashed #dedede 0.1px;
       text-align: justify;
       font-family: 'Cabin';
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 18px;
+      line-height: 23px;
       color: #333; }
     .main-content .posts-container .bottom-cta {
       display: -webkit-box;
@@ -4717,10 +4718,11 @@ body {
   display: none; }
 
 .post-content {
+  margin-top: 30px;
   font-family: 'Cabin';
-  font-size: 13.5px;
-  text-align: center;
-  line-height: 20px;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 23px;
   color: #333; }
 
 @media (min-width: 961px) and (max-width: 1200px) {
